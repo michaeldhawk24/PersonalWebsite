@@ -11,11 +11,14 @@
     <!-- Navigation Bar -->
     <nav class="navbar">
         <div class="container">
-            <div class="nav-brand">Michael Hawk</div>
+            <div class="nav-brand">
+                <i class="fas fa-cog"></i> MICHAEL HAWK
+            </div>
             <ul class="nav-menu">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -25,25 +28,33 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
-            <h1>Hi, I'm Michael Hawk</h1>
-            <p class="subtitle">Mechanical Engineer</p>
-            <p class="description">Building the world towards a better future</p>
-            <a href="#projects" class="btn btn-primary">View My Work</a>
+            <h1>Mechanical Engineering Solutions</h1>
+            <p class="subtitle">Precision. Innovation. Performance.</p>
+            <p class="description">Designing high-performance systems and mechanical solutions for aerospace, energy, and industrial applications</p>
+            <a href="#projects" class="btn btn-primary">View Portfolio</a>
         </div>
+        <div class="hero-accent"></div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <h2>About Me</h2>
+            <h2>About</h2>
             <div class="about-content">
-                <p>
-                    I'm a passionate software engineer with expertise in building scalable web applications. 
-                    I love solving challenging problems and staying updated with the latest technologies.
-                </p>
-                <p>
-                    When I'm not coding, you can find me contributing to open-source projects or exploring new frameworks.
-                </p>
+                <div class="about-text">
+                    <p>
+                        I'm a dedicated mechanical engineer with expertise in designing and optimizing complex mechanical systems. 
+                        Specializing in structural analysis, fluid dynamics, thermal management, and advanced manufacturing techniques.
+                    </p>
+                    <p>
+                        My experience spans aerospace components, industrial machinery, HVAC systems, and renewable energy applications. 
+                        I am committed to delivering precision-engineered solutions that meet rigorous performance and safety standards.
+                    </p>
+                    <p>
+                        Proficient in CAD modeling, FEA simulation, and project management with a track record of delivering solutions 
+                        that exceed specifications and timelines.
+                    </p>
+                </div>
             </div>
         </div>
     </section>
@@ -54,36 +65,135 @@
             <h2>Featured Projects</h2>
             <div class="project-grid">
                 <div class="project-card">
-                    <h3>E-Commerce Platform</h3>
-                    <p>A full-stack e-commerce solution built with React, Node.js, and MongoDB. Features include user authentication, product catalog, and payment integration.</p>
-                    <div class="tech-stack">
-                        <span class="tech-tag">React</span>
-                        <span class="tech-tag">Node.js</span>
-                        <span class="tech-tag">MongoDB</span>
+                    <div class="project-header">
+                        <i class="fas fa-rocket"></i>
+                        <h3>Aerospace Component Design</h3>
                     </div>
-                    <a href="#" class="project-link">View Project →</a>
+                    <p>High-performance compressor blade assembly for turbine engines. Optimized for stress distribution, thermal cycling, and manufacturing tolerances using ANSYS FEA and topology optimization.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">CATIA</span>
+                        <span class="tech-tag">ANSYS</span>
+                        <span class="tech-tag">FEA</span>
+                        <span class="tech-tag">CFD</span>
+                    </div>
                 </div>
 
                 <div class="project-card">
-                    <h3>Task Management App</h3>
-                    <p>A collaborative task management application with real-time updates. Built with Vue.js, Firebase, and TypeScript for a seamless user experience.</p>
-                    <div class="tech-stack">
-                        <span class="tech-tag">Vue.js</span>
-                        <span class="tech-tag">Firebase</span>
-                        <span class="tech-tag">TypeScript</span>
+                    <div class="project-header">
+                        <i class="fas fa-fan"></i>
+                        <h3>Thermal Management System</h3>
                     </div>
-                    <a href="#" class="project-link">View Project →</a>
+                    <p>Advanced cooling system design for high-power industrial applications. Includes heat exchanger sizing, fluid flow analysis, and 3D thermal simulation for optimal efficiency.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">SOLIDWORKS</span>
+                        <span class="tech-tag">Fluent</span>
+                        <span class="tech-tag">Thermodynamics</span>
+                        <span class="tech-tag">AutoCAD</span>
+                    </div>
                 </div>
 
                 <div class="project-card">
-                    <h3>Data Analytics Dashboard</h3>
-                    <p>An interactive dashboard for visualizing complex datasets. Uses D3.js for visualizations and Flask backend for data processing.</p>
-                    <div class="tech-stack">
-                        <span class="tech-tag">D3.js</span>
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Flask</span>
+                    <div class="project-header">
+                        <i class="fas fa-wind"></i>
+                        <h3>Wind Turbine Tower Analysis</h3>
                     </div>
-                    <a href="#" class="project-link">View Project →</a>
+                    <p>Structural analysis and optimization of vertical axis wind turbine towers. Performed modal analysis, fatigue assessment, and foundation design for renewable energy applications.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">ABAQUS</span>
+                        <span class="tech-tag">Structural Analysis</span>
+                        <span class="tech-tag">MATLAB</span>
+                        <span class="tech-tag">CAD</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <i class="fas fa-industry"></i>
+                        <h3>Manufacturing Process Optimization</h3>
+                    </div>
+                    <p>Process optimization for precision manufacturing of medical device components. Implemented lean manufacturing principles and quality control systems achieving 99.8% tolerance compliance.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Process Design</span>
+                        <span class="tech-tag">Lean Manufacturing</span>
+                        <span class="tech-tag">Six Sigma</span>
+                        <span class="tech-tag">Quality Control</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <i class="fas fa-cube"></i>
+                        <h3>Pressure Vessel Design</h3>
+                    </div>
+                    <p>Custom high-pressure vessel design compliant with ASME Boiler and Pressure Vessel Code. Included stress analysis, fatigue testing protocols, and detailed manufacturing drawings.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">ASME Standards</span>
+                        <span class="tech-tag">Pressure Analysis</span>
+                        <span class="tech-tag">CATIA</span>
+                        <span class="tech-tag">Documentation</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <i class="fas fa-microchip"></i>
+                        <h3>System Integration & Testing</h3>
+                    </div>
+                    <p>End-to-end integration of mechanical and electrical systems for industrial automation. Conducted comprehensive testing, failure analysis, and performance validation.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">System Integration</span>
+                        <span class="tech-tag">Testing & Validation</span>
+                        <span class="tech-tag">Documentation</span>
+                        <span class="tech-tag">Risk Assessment</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2>Professional Experience</h2>
+            <div class="experience-timeline">
+                <div class="experience-item">
+                    <div class="experience-marker"></div>
+                    <div class="experience-content">
+                        <h3>Senior Mechanical Engineer</h3>
+                        <p class="company">Advanced Propulsion Systems Inc.</p>
+                        <p class="date">2023 - Present</p>
+                        <ul>
+                            <li>Lead mechanical design and analysis for rocket propulsion components</li>
+                            <li>Oversee FEA validation and testing protocols for aerospace applications</li>
+                            <li>Mentor junior engineers on CAD modeling and best practices</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="experience-item">
+                    <div class="experience-marker"></div>
+                    <div class="experience-content">
+                        <h3>Mechanical Design Engineer</h3>
+                        <p class="company">Industrial Solutions Group</p>
+                        <p class="date">2020 - 2023</p>
+                        <ul>
+                            <li>Designed thermal management systems for heavy industrial machinery</li>
+                            <li>Reduced manufacturing costs by 15% through design optimization</li>
+                            <li>Coordinated with cross-functional teams for product development</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="experience-item">
+                    <div class="experience-marker"></div>
+                    <div class="experience-content">
+                        <h3>Junior Mechanical Engineer</h3>
+                        <p class="company">Precision Manufacturing Corp.</p>
+                        <p class="date">2018 - 2020</p>
+                        <ul>
+                            <li>Performed structural and thermal analysis using ANSYS</li>
+                            <li>Created detailed technical drawings and manufacturing specifications</li>
+                            <li>Supported quality assurance and testing initiatives</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -92,33 +202,42 @@
     <!-- Skills Section -->
     <section id="skills" class="skills">
         <div class="container">
-            <h2>Skills & Technologies</h2>
+            <h2>Technical Expertise</h2>
             <div class="skills-grid">
                 <div class="skill-category">
-                    <h3>Frontend</h3>
+                    <h3>CAD & Modeling</h3>
                     <ul>
-                        <li>React</li>
-                        <li>Vue.js</li>
-                        <li>TypeScript</li>
-                        <li>HTML/CSS</li>
+                        <li>CATIA V5/V6</li>
+                        <li>SOLIDWORKS</li>
+                        <li>AutoCAD</li>
+                        <li>NX Unigraphics</li>
                     </ul>
                 </div>
                 <div class="skill-category">
-                    <h3>Backend</h3>
+                    <h3>Analysis & Simulation</h3>
                     <ul>
-                        <li>Node.js</li>
-                        <li>Python</li>
-                        <li>Java</li>
-                        <li>SQL</li>
+                        <li>ANSYS Suite (FEA, CFD)</li>
+                        <li>ABAQUS</li>
+                        <li>Fluent</li>
+                        <li>MATLAB</li>
                     </ul>
                 </div>
                 <div class="skill-category">
-                    <h3>Tools & Platforms</h3>
+                    <h3>Engineering Disciplines</h3>
                     <ul>
-                        <li>Git</li>
-                        <li>Docker</li>
-                        <li>AWS</li>
-                        <li>CI/CD</li>
+                        <li>Structural Analysis</li>
+                        <li>Thermal Management</li>
+                        <li>Fluid Dynamics</li>
+                        <li>Fatigue & Failure Analysis</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Standards & Methodologies</h3>
+                    <ul>
+                        <li>ASME Codes</li>
+                        <li>Six Sigma</li>
+                        <li>Lean Manufacturing</li>
+                        <li>Design for Manufacturing</li>
                     </ul>
                 </div>
             </div>
@@ -129,7 +248,7 @@
     <section id="contact" class="contact">
         <div class="container">
             <h2>Get In Touch</h2>
-            <p class="contact-intro">I'd love to hear from you! Feel free to reach out for collaborations or just a friendly hello.</p>
+            <p class="contact-intro">Interested in collaborating on innovative mechanical engineering projects? Let's connect.</p>
             <div class="contact-info">
                 <a href="mailto:michael@example.com" class="contact-link">
                     <i class="fas fa-envelope"></i> Email
@@ -139,9 +258,6 @@
                 </a>
                 <a href="https://github.com/michaeldhawk24" target="_blank" class="contact-link">
                     <i class="fab fa-github"></i> GitHub
-                </a>
-                <a href="https://twitter.com" target="_blank" class="contact-link">
-                    <i class="fab fa-twitter"></i> Twitter
                 </a>
             </div>
         </div>
