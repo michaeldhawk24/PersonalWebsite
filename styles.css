@@ -1,12 +1,12 @@
 :root {
     --primary-dark: #000000;
     --secondary-dark: #0A0E27;
-    --accent-blue: #1a3a52;
+    --accent-blue: #1a1a2e;
     --accent-purple: #2a1f4a;
-    --accent-light: #e0e0e0;
+    --accent-light: #a0a0a0;
     --accent-white: #ffffff;
-    --highlight: #00d4ff;
-    --highlight-purple: #9d4edd;
+    --highlight: #808080;
+    --highlight-purple: #6a4a8a;
     --border-subtle: #2a2a3e;
     --transition: all 0.3s ease;
 }
@@ -83,7 +83,7 @@ body {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, var(--secondary-dark), var(--accent-purple));
+    background: linear-gradient(135deg, #1a0033, #3d0066);
     color: var(--accent-white);
     padding: 100px 20px;
     text-align: center;
@@ -102,7 +102,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(157,78,221,0.05)" stroke-width="0.5"/></pattern></defs><rect width="1200" height="400" fill="url(%23grid)" /></svg>');
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 [...]
     pointer-events: none;
 }
 
@@ -110,7 +110,7 @@ body {
     position: absolute;
     width: 400px;
     height: 400px;
-    background: radial-gradient(circle, rgba(0, 212, 255, 0.1), transparent);
+    background: radial-gradient(circle, rgba(128, 128, 128, 0.1), transparent);
     border-radius: 50%;
     top: -100px;
     right: -100px;
@@ -175,19 +175,20 @@ body {
     color: var(--highlight);
     border-color: var(--highlight);
     transform: translateY(-3px);
-    box-shadow: 0 10px 30px rgba(0, 212, 255, 0.2);
+    box-shadow: 0 10px 30px rgba(128, 128, 128, 0.2);
 }
 
 /* About Section */
 .about {
     padding: 80px 20px;
-    background-color: var(--secondary-dark);
+    background-color: #1a0033;
     border-bottom: 1px solid var(--border-subtle);
 }
 
 .about h2,
 .projects h2,
 .experience h2,
+.education h2,
 .skills h2,
 .contact h2 {
     font-size: 2.5rem;
@@ -204,6 +205,7 @@ body {
 .about h2::after,
 .projects h2::after,
 .experience h2::after,
+.education h2::after,
 .skills h2::after,
 .contact h2::after {
     content: '';
@@ -242,7 +244,7 @@ body {
 }
 
 .project-card {
-    background: var(--secondary-dark);
+    background: #1a0033;
     border: 1px solid var(--border-subtle);
     border-radius: 0;
     padding: 2rem;
@@ -252,9 +254,9 @@ body {
 
 .project-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 12px 30px rgba(0, 212, 255, 0.15);
+    box-shadow: 0 12px 30px rgba(128, 128, 128, 0.15);
     border-color: var(--highlight);
-    background: linear-gradient(135deg, rgba(26, 58, 82, 0.3), rgba(42, 31, 74, 0.3));
+    background: linear-gradient(135deg, rgba(42, 31, 74, 0.3), rgba(58, 31, 86, 0.3));
 }
 
 .project-header {
@@ -290,13 +292,13 @@ body {
 }
 
 .tech-tag {
-    background-color: rgba(0, 212, 255, 0.1);
+    background-color: rgba(128, 128, 128, 0.1);
     color: var(--highlight);
     padding: 0.5rem 1rem;
     border-radius: 2px;
     font-size: 0.8rem;
     font-weight: 600;
-    border: 1px solid rgba(0, 212, 255, 0.3);
+    border: 1px solid rgba(128, 128, 128, 0.3);
     text-transform: uppercase;
     letter-spacing: 0.05em;
 }
@@ -304,7 +306,7 @@ body {
 /* Experience Section */
 .experience {
     padding: 80px 20px;
-    background-color: var(--secondary-dark);
+    background-color: #1a0033;
     border-bottom: 1px solid var(--border-subtle);
 }
 
@@ -339,8 +341,8 @@ body {
     height: 16px;
     border-radius: 50%;
     background-color: var(--highlight);
-    border: 2px solid var(--secondary-dark);
-    box-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
+    border: 2px solid #1a0033;
+    box-shadow: 0 0 10px rgba(128, 128, 128, 0.3);
 }
 
 .experience-content h3 {
@@ -383,10 +385,58 @@ body {
     color: var(--highlight);
 }
 
+/* Education Section */
+.education {
+    padding: 80px 20px;
+    background-color: var(--primary-dark);
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.education-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.education-item {
+    background: #1a0033;
+    padding: 2rem;
+    border: 1px solid var(--border-subtle);
+    border-radius: 0;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.education-item:hover {
+    border-color: var(--highlight);
+    box-shadow: 0 4px 15px rgba(128, 128, 128, 0.1);
+}
+
+.education-item h3 {
+    color: var(--accent-white);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.05em;
+}
+
+.education-item .degree {
+    color: var(--highlight);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.education-item .graduation {
+    color: var(--accent-light);
+    font-size: 1rem;
+}
+
 /* Skills Section */
 .skills {
     padding: 80px 20px;
-    background-color: var(--primary-dark);
+    background-color: #1a0033;
 }
 
 .skills-grid {
@@ -407,7 +457,7 @@ body {
 
 .skill-category:hover {
     border-color: var(--highlight);
-    box-shadow: 0 4px 15px rgba(0, 212, 255, 0.1);
+    box-shadow: 0 4px 15px rgba(128, 128, 128, 0.1);
 }
 
 .skill-category h3 {
@@ -445,7 +495,7 @@ body {
 .contact {
     padding: 80px 20px;
     text-align: center;
-    background-color: var(--secondary-dark);
+    background-color: #1a0033;
     border-bottom: 1px solid var(--border-subtle);
 }
 
@@ -483,7 +533,7 @@ body {
     background-color: var(--highlight);
     color: var(--primary-dark);
     transform: translateY(-3px);
-    box-shadow: 0 10px 25px rgba(0, 212, 255, 0.25);
+    box-shadow: 0 10px 25px rgba(128, 128, 128, 0.25);
 }
 
 /* Footer */
@@ -537,6 +587,7 @@ body {
     .about h2,
     .projects h2,
     .experience h2,
+    .education h2,
     .skills h2,
     .contact h2 {
         font-size: 2rem;
