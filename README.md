@@ -1,6 +1,6 @@
 # Personal Website
 
-A modern, responsive personal portfolio website for a software engineer.
+A modern, responsive personal portfolio website for a Mechanical engineer.
 
 ## Features
 
