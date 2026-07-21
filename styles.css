@@ -79,6 +79,8 @@ li { margin: 7px 0; }
 .project-card h3, .project-card p, .project-card .tags { margin-left: 22px; margin-right: 22px; }
 .project-card .project-date { margin-top: 22px; }
 .tags { display: flex; gap: 7px; flex-wrap: wrap; margin-top: 18px; margin-bottom: 24px; }
+.presentation-link { display: inline-flex; align-items: center; gap: 8px; margin: 4px 22px 0; color: var(--gold); font-size: 12px; font-weight: 800; text-decoration: none; }
+.presentation-link:hover { color: #ffe09a; }
 .tags span { padding: 5px 8px; background: rgba(112, 173, 255, 0.1); color: #bfd5f5; font-size: 9px; font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase; }
 .two-column { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 44px; align-items: start; }
 .stack { display: grid; gap: 14px; }
