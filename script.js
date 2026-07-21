@@ -10,7 +10,7 @@ updateHeader();
 menuButton.addEventListener('click', () => {
   const isOpen = navLinks.classList.toggle('is-open');
   menuButton.classList.toggle('is-open', isOpen);
-  menuButton.setAttribute('aria-expanded', isOpen);
+  menuButton.setAttribute('aria-expanded', isOpen.toString());
 });
 
 links.forEach(link => link.addEventListener('click', () => {
@@ -19,7 +19,7 @@ links.forEach(link => link.addEventListener('click', () => {
   menuButton.setAttribute('aria-expanded', 'false');
 }));
 
-const sections = document.querySelectorAll('main section[id]');
+const sections = document.querySelectorAll('main section[id], footer[id]');
 const activeNavigation = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (!entry.isIntersecting) return;
@@ -37,16 +37,5 @@ const revealObserver = new IntersectionObserver(entries => {
   });
 }, { threshold: 0.12 });
 document.querySelectorAll('.reveal').forEach(element => revealObserver.observe(element));
-
-const filters = document.querySelectorAll('.filter');
-const projects = document.querySelectorAll('.project-card');
-filters.forEach(filter => filter.addEventListener('click', () => {
-  const category = filter.dataset.filter;
-  filters.forEach(button => button.classList.toggle('active', button === filter));
-  projects.forEach(project => {
-    const visible = category === 'all' || project.dataset.category.includes(category);
-    project.classList.toggle('is-filtered', !visible);
-  });
-}));
 
 document.querySelector('#year').textContent = new Date().getFullYear();
