@@ -175,3 +175,82 @@ li { margin: 7px 0; }
 
 .photo-nav.prev { left: 8px; }
 .photo-nav.next { right: 8px; }
+/* PDF Button Styling */
+.pdf-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+  padding: 8px 16px;
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.pdf-button:hover {
+  background-color: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Modal Outer Backdrop */
+.pdf-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(6px);
+  display: none; /* Hidden by default */
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+/* Show the modal when its ID is in the URL hash */
+.pdf-modal:target {
+  display: flex;
+}
+
+/* Modal Inner Container */
+.pdf-modal-content {
+  position: relative;
+  width: 90%;
+  max-width: 950px;
+  height: 85vh;
+  background-color: #121212;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.pdf-modal-content iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Close Button (X) */
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 18px;
+  font-size: 32px;
+  font-weight: bold;
+  color: #ffffff;
+  text-decoration: none;
+  z-index: 10000;
+  line-height: 1;
+  transition: color 0.2s ease;
+}
+
+.close-modal:hover {
+  color: #f87171;
+}
