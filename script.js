@@ -39,3 +39,39 @@ const revealObserver = new IntersectionObserver(entries => {
 document.querySelectorAll('.reveal').forEach(element => revealObserver.observe(element));
 
 document.querySelector('#year').textContent = new Date().getFullYear();
+document.addEventListener('DOMContentLoaded', () => {
+  // Find all photo containers on the page
+  const sliders = document.querySelectorAll('.project-photo-container');
+
+  sliders.forEach(slider => {
+    const images = slider.querySelectorAll('.project-photo');
+    const prevBtn = slider.querySelector('.photo-nav.prev');
+    const nextBtn = slider.querySelector('.photo-nav.next');
+
+    // If there is only 1 photo (or 0), hide the arrow buttons
+    if (images.length <= 1) {
+      if (prevBtn) prevBtn.style.display = 'none';
+      if (nextBtn) nextBtn.style.display = 'none';
+      return;
+    }
+
+    let currentIndex = 0;
+
+    function updateSlide(index) {
+      images.forEach(img => img.classList.remove('active'));
+      images[index].classList.add('active');
+    }
+
+    nextBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      currentIndex = (currentIndex + 1) % images.length;
+      updateSlide(currentIndex);
+    });
+
+    prevBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      updateSlide(currentIndex);
+    });
+  });
+});
