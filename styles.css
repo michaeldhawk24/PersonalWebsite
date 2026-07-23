@@ -124,10 +124,54 @@ li { margin: 7px 0; }
   .reveal { opacity: 1; transform: none; transition: none; }
   .button, .project-card { transition: none; }
 }
-.project-photo {
+/* Slider Container */
+.project-photo-container {
+  position: relative;
   width: 100%;
-  height: 200px;
-  object-fit: cover;
+  height: 200px; /* Adjust height as needed */
+  overflow: hidden;
   border-radius: 8px 8px 0 0;
-  display: block;
+  background-color: #1a1a1a; /* Placeholder color while loading */
 }
+
+/* Staked Images */
+.project-photo-container .project-photo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: none;
+}
+
+/* Show only the active image */
+.project-photo-container .project-photo.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Arrow Buttons */
+.photo-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+  z-index: 5;
+}
+
+.photo-nav:hover {
+  background: rgba(0, 0, 0, 0.85);
+}
+
+.photo-nav.prev { left: 8px; }
+.photo-nav.next { right: 8px; }
